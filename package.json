@@ -1,0 +1,16 @@
+{
+  "name": "files-cli",
+  "version": "0.0.1",
+  "description": "manipulate file in cli",
+  "bin": {
+    "files": "bin/index.js"
+  },
+  "repository": "git@github.com:zhengjunxin/files-cli.git",
+  "author": "郑俊鑫 <18810544291@163.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.11.0",
+    "findit": "^2.0.0",
+    "node-mkdirp": "^0.0.1"
+  }
+}
