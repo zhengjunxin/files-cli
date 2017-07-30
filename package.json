@@ -1,6 +1,6 @@
 {
   "name": "files-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "manipulate file in cli",
   "bin": {
     "files": "bin/index.js"
