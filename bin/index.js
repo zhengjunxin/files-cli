@@ -5,6 +5,7 @@ const path = require('path')
 const fs = require('fs')
 const mkdirp = require('node-mkdirp')
 const program = require('commander')
+const s2ms = s => s / 1000
 
 program
     .option('-c, --copy', 'copy the files')
@@ -13,6 +14,7 @@ program
     .command('gather <source> <target>')
     .description('gather all files in source folder to target folder')
     .action((source, target) => {
+        const begin = Date.now()
         const finder = findit(source)
         mkdirp(target)
 
@@ -26,6 +28,10 @@ program
             else {
                 fs.rename(oldpath, newpath)
             }
+        })
+        finder.on('end', () => {
+            const now = Date.now()
+            console.log(`✨  Done in ${s2ms(now - begin)}s`)
         })
     })
     .on('--help', function() {
