@@ -18,7 +18,7 @@ yarn global add files-cli
 
 ```bash
 # copy all files in source-folder to target-folder
-$ files gather source-folder target-folder -c
+$ files gather source-folder target-folder --copy
 ✨  Done!
 ```
 
